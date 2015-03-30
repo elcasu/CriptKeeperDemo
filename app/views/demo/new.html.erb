@@ -1,0 +1,9 @@
+<%= form_for @demo, url: demo_index_url do |f| %>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %><br />
+  <%= f.label :secret_value %><br />
+  <%= f.text_field :secret_value %><br />
+  <%= f.submit "Save" %>
+<% end %>
+<br />
+<%= link_to "Back to list", demo_index_url %>

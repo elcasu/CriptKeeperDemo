@@ -1,0 +1,15 @@
+<h2>Demo list</h2>
+<%= link_to "Add new record", new_demo_url %>
+<br /><br />
+<table width="70%">
+  <tr>
+    <th>Name</th>
+    <th>Secret value</th>
+  </tr>
+  <% @demos.each do |demo| %>
+    <tr>
+      <td style="border: 1px solid #ddd"><%= link_to demo.name, edit_demo_url(demo) %></td>
+      <td style="border: 1px solid #ddd"><%= demo.secret_value %></td>
+    </tr>
+  <% end %>
+</table>
